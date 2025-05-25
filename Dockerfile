@@ -13,7 +13,7 @@ RUN pip install -r requirements.txt
 # Copy the current directory contents into the container at /app
 COPY src/ .
 # Make port 8501 available to the world outside this container
-EXPOSE 8501
+EXPOSE 80
 
 # Run app.py when the container launches
-ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=80", "--server.address=0.0.0.0"]
